@@ -1,7 +1,7 @@
 -- Creating connection to connect with aws s3
 CREATE STAGE my_stage
 URL = "s3://dw-snowflake-bucket/instacart/"
-CREDENTIALS = (put your AWS_KEY_ID and AWS_SECRET_KEY here);
+CREDENTIALS = (AWS_KEY_ID="XYZaccessId" AWS_SECRET_KEY="abcSecretId");
 
 -- Creating file format object
 CREATE OR REPLACE FILE FORMAT csv_file_format
