@@ -5,15 +5,14 @@ CREATE OR REPLACE SCHEMA external_stages;
 // Creating external stage
 CREATE OR REPLACE STAGE MANAGE_DB.EXTERNAL_STAGES.aws_stage 
     url = 's3://dw-snowflake-bucket/instacart/'
-    credentials = (aws_key_id = '',
-aws_secret_key = '');
+    credentials = (put your AWS_KEY_ID and AWS_SECRET_KEY here);
 
 // Description of extrenal stage
 DESC STAGE MANAGE_DB.EXTERNAL_STAGES.aws_stage;
 
 // Alter external stage
 ALTER STAGE MANAGE_DB.EXTERNAL_STAGES.aws_stage
-    SET credentials = (aws_key_id = '' aws_secret_key = '');
+    SET credentials = (put your AWS_KEY_ID and AWS_SECRET_KEY here);
 
 // Publicly accessible staging_area
 CREATE OR REPLACE STAGE MANAGE_DB.EXTERNAL_STAGES.aws_public_stage
